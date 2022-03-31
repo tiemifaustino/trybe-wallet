@@ -94,4 +94,7 @@ Login.propTypes = ({
 
 export default connect(null, mapDispatchToProps)(Login);
 
-/* Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test */
+/* Source:
+Método RegExp.prototype.test(): https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
+Validação de email: https://regexr.com/3e48o
+*/
