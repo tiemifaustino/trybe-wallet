@@ -9,8 +9,8 @@ class Header extends React.Component {
     return (
       <div>
         <h2>TrybeWallet</h2>
-        <p data-testid="email-field">{ userEmail }</p>
         <div>
+          <p data-testid="email-field">{ userEmail }</p>
           <span>Despesa total: R$</span>
           <span data-testid="total-field">0</span>
           <span data-testid="header-currency-field">
