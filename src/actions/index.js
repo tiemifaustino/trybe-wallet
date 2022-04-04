@@ -3,19 +3,21 @@ export const SAVE_EMAIL = 'SAVE_EMAIL';
 export const SAVE_EXPENSES = 'SAVE_EXPENSES';
 export const RECEIVE_CURR_SUCESS = 'RECEIVE_CURR_SUCESS';
 export const RECEIVE_CURR_FAILURE = 'RECEIVE_CURR_FAILURE';
+export const FILTERED_EXPENSES = 'FILTERED_EXPENSES';
 
 export const saveEmail = (email) => ({
   type: SAVE_EMAIL,
   email,
 });
 
-// A chave expenses é um array de objetos
-// O array é definido no estado inicial do reducer "wallet"
-// Com o spread operator, o objeto recebido da API (exchangeRates) é adicionado no objeto junto ao expensesDetails que são as informações salvas no estado do Componente Wallet:
-// ( id, value, currency, tag, method, description )
-export const saveExpenses = (expensesDetails, exchangeRates) => ({
+export const saveExpenses = (expenses) => ({
   type: SAVE_EXPENSES,
-  expenses: { ...expensesDetails, exchangeRates },
+  expenses,
+});
+
+export const deleteExpense = (expensesFiltered) => ({
+  type: FILTERED_EXPENSES,
+  expenses: expensesFiltered,
 });
 
 export const receiveCurrencySucess = (currencies) => ({
@@ -43,13 +45,18 @@ export function fetchCurrencies() {
   };
 }
 
+// A chave expenses é um array de objetos (action "saveExpenses")
+// O array é definido no estado inicial do reducer "wallet"
+// Com o spread operator, o objeto recebido da API (exchangeRates) é adicionado no objeto junto ao expensesDetails que são as informações salvas no estado do Componente Wallet:
+// ( id, value, currency, tag, method, description )
 export function fetchRates(expensesDetails) {
   return async (dispatch) => {
     try {
       const response = await fetch('https://economia.awesomeapi.com.br/json/all');
       const exchangeRates = await response.json();
+      const expenses = { ...expensesDetails, exchangeRates };
 
-      dispatch(saveExpenses(expensesDetails, exchangeRates));
+      dispatch(saveExpenses(expenses));
     } catch (error) {
       dispatch(receiveCurrencyFailure(error));
     }

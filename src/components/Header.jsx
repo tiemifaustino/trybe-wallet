@@ -10,7 +10,7 @@ class Header extends React.Component {
 
     userExpenses.forEach((expense) => {
       const { exchangeRates, currency, value } = expense;
-      const conversion = exchangeRates[currency].ask * value;
+      const conversion = Number(exchangeRates[currency].ask) * value;
       changes += conversion;
     });
     // Quando uma propriedade de um objeto é acessado com [], conseguimos acessar o valor dessa propriedade colocando o nome dela (em string) ou acessando com uma variável que no caso é a variável "currency" (Possui as siglas das moedas)
