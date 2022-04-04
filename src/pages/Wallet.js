@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchCurrencies, fetchRates } from '../actions';
 import ExpenseTable from '../components/ExpenseTable';
 import Header from '../components/Header';
+import './Wallet.css';
 
 class Wallet extends React.Component {
   constructor(props) {
@@ -53,7 +54,7 @@ class Wallet extends React.Component {
     const { value, currency, tag, method, description } = this.state;
 
     return (
-      <div>
+      <>
         <Header />
 
         <form>
@@ -64,6 +65,8 @@ class Wallet extends React.Component {
               type="number"
               name="value"
               id="value"
+              min="0"
+              className="value"
               value={ value }
               onChange={ this.inputHandler }
             />
@@ -140,7 +143,10 @@ class Wallet extends React.Component {
         </form>
 
         <ExpenseTable />
-      </div>
+        <footer>
+          <div>Desenvolvido por Tiemi Faustino</div>
+        </footer>
+      </>
     );
   }
 }

@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.container-user {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+header , .container-user , span {
+  background-color: #006ba6;
+  color: #ffbc42;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+h2 {
+  background-color: #006ba6;
+  color: #ffbc42;
+  font-size: 1.8rem;
+}
+
+.user-expense {
+  color: #70e000;
+}
