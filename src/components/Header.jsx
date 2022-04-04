@@ -48,6 +48,8 @@ export default connect(mapStateToProps)(Header);
 
 /* Source:
 Percorrer um objeto:
+
 https://www.horadecodar.com.br/2021/02/09/como-percorrer-um-objeto-em-javascript/
+
 https://app.betrybe.com/course/fundamentals/introducao-a-javascript-es6-e-testes-unitarios/javascript-es6-fluxo-de-excecao-e-objetos/d9bffb5f-e6b0-4807-9b64-30741a3d3d70/conteudos/aaffdb78-a36f-48ae-bbc9-e86ab248ae5e/objetos-parte-i-adicionando-novas-chaves-keys/6496a107-7a96-428b-b195-0c11dd30721d?use_case=side_bar
 */
