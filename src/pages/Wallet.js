@@ -154,7 +154,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getCurrencyInitials: () => dispatch(fetchCurrencies()),
-  getFetchRates: (expenses) => dispatch(fetchRates(expenses)),
+  getFetchRates: (expensesDetails) => dispatch(fetchRates(expensesDetails)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
