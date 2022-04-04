@@ -17,7 +17,7 @@ class Header extends React.Component {
     // objeto[variavelQueContemONomeDaPropriedade]
 
     return (
-      <div>
+      <header>
         <h2>TrybeWallet</h2>
         <div>
           <p data-testid="email-field">{ userEmail }</p>
@@ -29,7 +29,7 @@ class Header extends React.Component {
           </span>
         </div>
 
-      </div>
+      </header>
     );
   }
 }
