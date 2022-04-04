@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import { saveEmail } from '../actions';
+import ImageLogo from '../images/wallet_image.png';
+import './Login.css';
 
 class Login extends React.Component {
   constructor(props) {
@@ -43,35 +45,34 @@ class Login extends React.Component {
     const { isButtonDisabled, password, email } = this.state;
 
     return (
-      <div>
-        <h1>Login</h1>
+      <div className="container-login">
+        <img src={ ImageLogo } alt="wallet" width="150px" />
+        <h1>Trybewallet</h1>
 
-        <form onSubmit={ this.submitHandler }>
-          <label htmlFor="email">
-            Email:
-            <input
-              data-testid="email-input"
-              type="email"
-              name="email"
-              id="email"
-              value={ email }
-              onChange={ this.inputHandler }
-            />
-          </label>
+        <form className="container-login__inputs" onSubmit={ this.submitHandler }>
 
-          <label htmlFor="password">
-            Senha:
-            <input
-              data-testid="password-input"
-              type="password"
-              name="password"
-              id="password"
-              value={ password }
-              onChange={ this.inputHandler }
-            />
-          </label>
+          <input
+            data-testid="email-input"
+            type="email"
+            name="email"
+            id="email"
+            value={ email }
+            onChange={ this.inputHandler }
+            placeholder="Email"
+          />
+
+          <input
+            data-testid="password-input"
+            type="password"
+            name="password"
+            id="password"
+            value={ password }
+            onChange={ this.inputHandler }
+            placeholder="Senha"
+          />
 
           <button
+            className={ isButtonDisabled ? 'button--disabled' : 'button--able' }
             type="submit"
             disabled={ isButtonDisabled }
           >
