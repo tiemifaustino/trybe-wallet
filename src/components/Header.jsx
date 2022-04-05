@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
+import ImageLogo from '../images/wallet_image.png';
 import './Header.css';
 
 class Header extends React.Component {
@@ -19,7 +20,10 @@ class Header extends React.Component {
 
     return (
       <header>
-        <h2>TrybeWallet</h2>
+        <div className="container-logo">
+          <img src={ ImageLogo } alt="wallet" width="50px" height="50px" />
+          <h2>TrybeWallet</h2>
+        </div>
         <div className="container-user">
           <span data-testid="email-field">{ userEmail }</span>
           <span className="user-expense ">Despesa total R$</span>

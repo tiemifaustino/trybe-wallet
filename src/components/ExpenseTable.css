@@ -1,0 +1,31 @@
+table {
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+table thead {
+  background-color: #006ba6;
+  border: none;
+}
+
+table th {
+  color: #ffbc42;
+  padding: 15px;
+}
+
+table td {
+  background-color: #ffbc42;
+  padding: 10px;
+  text-align: center;
+}
+
+button {
+  background-color: #006ba6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0, 10px;
+}

@@ -1,13 +1,9 @@
-footer {
-  display: flex;
-  justify-content: center;
-}
-
 form {
+  background-color: #bbdefb;
   display: flex;
   font-size: 0.8rem;
   justify-content: center;
-  margin: 20px;
+  padding: 10px;
 }
 
 form button {
@@ -15,7 +11,7 @@ form button {
   border: none;
   border-radius: 8px;
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   padding: 10px;
 }
@@ -32,3 +28,10 @@ form .value {
   width: 100px;
 }
 
+footer {
+  bottom: 0;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
