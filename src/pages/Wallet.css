@@ -29,9 +29,21 @@ form .value {
 }
 
 footer {
+  background-color: #006ba6;
   bottom: 0;
+  color: #ffbc42;
+  font-weight: 600;
   padding: 10px;
   position: fixed;
-  text-align: center;
   width: 100%;
+}
+
+footer img {
+  margin: 5px;
+}
+
+footer div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }

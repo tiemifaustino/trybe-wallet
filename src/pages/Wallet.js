@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { fetchCurrencies, fetchRates } from '../actions';
 import ExpenseTable from '../components/ExpenseTable';
 import Header from '../components/Header';
+import GitHub from '../images/github_logo_icon.png';
+import LinkedIn from '../images/linkedin.png';
 import './Wallet.css';
 
 class Wallet extends React.Component {
@@ -144,7 +146,15 @@ class Wallet extends React.Component {
 
         <ExpenseTable />
         <footer>
-          <div>Desenvolvido por Tiemi Faustino</div>
+          <div>
+            Desenvolvido por Tiemi Faustino
+            <a href="https://github.com/tiemifaustino">
+              <img src={ GitHub } width="30px" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/tiemifaustino/">
+              <img src={ LinkedIn } width="30px" alt="LinkedIn" />
+            </a>
+          </div>
         </footer>
       </>
     );
