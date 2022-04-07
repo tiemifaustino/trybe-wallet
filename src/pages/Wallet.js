@@ -61,6 +61,7 @@ class Wallet extends React.Component {
       tag: '',
       method: '',
       description: '',
+      isButtonDisabled: true,
     });
   }
 
@@ -149,6 +150,7 @@ class Wallet extends React.Component {
           </label>
 
           <button
+            className={ isButtonDisabled ? 'button--disabled' : 'button--able' }
             type="submit"
             onClick={ this.submitHandler }
             disabled={ isButtonDisabled }

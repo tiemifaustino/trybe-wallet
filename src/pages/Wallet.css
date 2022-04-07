@@ -6,15 +6,28 @@ form {
   padding: 10px;
 }
 
-form button {
+form .button--disabled {
   background-color: #006ba6;
   border: none;
   border-radius: 8px;
   color: white;
   font-size: 0.8rem;
   font-weight: 600;
+  opacity: 0.6;
   padding: 10px;
 }
+
+form .button--able {
+  background-color: #006ba6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: none;
+  padding: 10px;
+}
+
 
 form input , select , option {
   background-color: whitesmoke;
