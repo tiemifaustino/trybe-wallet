@@ -114,6 +114,7 @@ class Wallet extends React.Component {
               value={ method }
               onChange={ this.inputHandler }
             >
+              <option>Selecione...</option>
               <option>Dinheiro</option>
               <option>Cartão de crédito</option>
               <option>Cartão de débito</option>
@@ -129,6 +130,7 @@ class Wallet extends React.Component {
               value={ tag }
               onChange={ this.inputHandler }
             >
+              <option>Selecione...</option>
               <option>Alimentação</option>
               <option>Lazer</option>
               <option>Trabalho</option>
