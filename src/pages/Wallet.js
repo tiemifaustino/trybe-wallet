@@ -19,6 +19,7 @@ class Wallet extends React.Component {
       tag: '',
       method: '',
       description: '',
+      isButtonDisabled: true,
     };
   }
 
@@ -29,18 +30,30 @@ class Wallet extends React.Component {
 
   inputHandler = ({ target }) => {
     const { name, value } = target;
-    this.setState({ [name]: value });
+    this.setState({ [name]: value }, this.validateInputs);
+  }
+
+  validateInputs = () => {
+    const { currency, tag, method, value } = this.state;
+    if ((currency !== '') && (tag !== '') && (method !== '') && (value !== '')) {
+      this.setState({ isButtonDisabled: false });
+    } else {
+      this.setState({ isButtonDisabled: true });
+    }
   }
 
   submitHandler = (event) => {
     event.preventDefault();
     const { getFetchRates } = this.props;
+    const { id, value, currency, tag, method, description } = this.state;
 
     this.setState((prevState) => ({
       id: prevState.id + 1,
     }));
 
-    getFetchRates(this.state);
+    const newState = { id, value, currency, tag, method, description };
+
+    getFetchRates(newState);
 
     this.setState({
       value: '',
@@ -53,7 +66,7 @@ class Wallet extends React.Component {
 
   render() {
     const { currencies } = this.props;
-    const { value, currency, tag, method, description } = this.state;
+    const { value, currency, tag, method, description, isButtonDisabled } = this.state;
 
     return (
       <>
@@ -138,6 +151,7 @@ class Wallet extends React.Component {
           <button
             type="submit"
             onClick={ this.submitHandler }
+            disabled={ isButtonDisabled }
           >
             Adicionar Despesa
 
