@@ -34,13 +34,13 @@ A aplicação é uma carteira de controle de gastos com conversor de moedas util
 Clone o projeto
 
 ```bash
-  git clone git@github.com:tiemifaustino/trivia-group24.git
+  git clone git@github.com:tiemifaustino/trybe-wallet.git
 ```
 
 Entre na pasta que você acabou de clonar
 
 ```bash
-  cd trivia-group24
+  cd trybe-wallet
 ```
 
 Instale as dependências
